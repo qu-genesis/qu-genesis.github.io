@@ -1,1 +1,0 @@
-# qu-genesis.github.io

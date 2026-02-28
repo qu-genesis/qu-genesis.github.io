@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Story by HTML5 UP — customized for Genesis Qu
+	html5up.net | @ajlkn | CCA 3.0 license
 -->
 <html>
 
@@ -11,7 +10,12 @@
     <link rel="shortcut icon" type="image/png" href="images/bee.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Barlow Condensed: narrow bespoke font for filter buttons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
@@ -19,351 +23,420 @@
 
 <body class="is-preload">
 
+    <!-- ── Sticky Navigation ── -->
+    <nav id="site-nav" role="navigation" aria-label="Main navigation">
+        <a href="#about" class="nav-brand">genesis qu</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#journalism">Journalism</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Wrapper -->
     <div id="wrapper" class="divided">
 
-        <!-- One -->
-        <section
+        <!-- ────────────────────────────────
+             HERO
+             ──────────────────────────── -->
+        <section id="about"
             class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
             <div class="content">
-                <h1>hello world, </h1>
-                <p class="major">Welcome! I am Genesis 🐙 and I'm a data scientist at the Minnesota Star Tribune.
-                    I use machine learning and AI to help journalists better speak to their audience and help the
-                    newsroom succeed in a competitive business environment.
-                    I graduated from Duke with a master's degree in
-                    Interdisciplinary Data Science and UCLA with double majors in Statistics and Political Science.
-                    I'm interested in data science and its intersections with journalism, public policy, and healthcare.
-                    Stay and learn a bit about my story and enjoy some of the projects that I have worked on.
-                </p>
+                <span class="section-eyebrow">Data Scientist · Journalist · Storyteller</span>
+                <h1>hello world,<span class="typing-cursor" aria-hidden="true"></span></h1>
+                <p class="major">I'm Genesis 🐙 — a data scientist at the Minnesota Star Tribune, where I build ML and
+                    AI tools to help great journalism reach the right readers. I studied Interdisciplinary Data Science
+                    at Duke and Statistics &amp; Political Science at UCLA. I'm most at home at the intersection of
+                    data, journalism, public policy, and healthcare.</p>
                 <ul class="actions stacked">
                     <li><a href="https://drive.google.com/file/d/1yvgtJEj0ORZaQG0O5hql72WGPZzmd_gC/view?usp=sharing"
-                            class="button">Resume</a></li>
+                            class="button" target="_blank" rel="noopener">Resume</a></li>
                 </ul>
                 <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/genesis-qu/"
-                            class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a>
+                    <li><a href="https://www.linkedin.com/in/genesis-qu/" class="icon brands style2 fa-linkedin-in"
+                            target="_blank" rel="noopener"><span class="label">LinkedIn</span></a>
                     </li>
-                    <li><a href="https://github.com/qu-genesis" class="icon brands style2 fa-github-alt"><span
-                                class="label">GitHub</span></a></li>
+                    <li><a href="https://github.com/qu-genesis" class="icon brands style2 fa-github-alt" target="_blank"
+                            rel="noopener"><span class="label">GitHub</span></a></li>
                 </ul>
             </div>
             <div class="image">
-                <img src="images/grad_pic.jpg" alt="" />
+                <img src="images/grad_pic.jpg" alt="Genesis Qu" />
             </div>
         </section>
 
+        <hr class="section-divider" />
 
-        <!-- Two -->
-        <section class="wrapper style1 align-center">
+        <!-- ────────────────────────────────
+             MY STORY
+             ──────────────────────────── -->
+        <section id="story" class="wrapper style1 align-center">
             <div class="inner">
-                <h2>My Story 👨‍💻 </h2>
-                <p>Here are some snippets of my professional and personal story 🦦. I grew up in Nanjing, China and
-                    Portland, Oregon 🌲. I love using data and code to tell stories and make beautiful visualizations.
-                    But i'm not only passionate about data, I also love journalism, music, baking and reading. You can
-                    find my GitHub projects as well as
-                    some of my clips at The Bruin in the slider below.</p>
-                <div class="items style1 medium onscroll-fade-in">
-                    <section>
-                        <span class="icon solid style2 major fa-chart-bar"></span>
-                        <h3>UCLA </h3>
-                        <p>I double majored in Statistics and Political Science at UCLA 🐻 . I enjoyed applying data
-                            science
-                            to analyze and catalyst
-                            social good.
-                        </p>
-                    </section>
-                    <section>
-                        <span class="icon solid style2 major fa-newspaper"></span>
-                        <h3>Daily Bruin</h3>
-                        <p>At UCLA, I found a love for journalism, first as a news reporter and then a news editor and
-                            finally
-                            editor-in-chief, where I ran and won on a platform to improve <a
-                                href="https://features.dailybruin.com/2022/diversity-report/"> diversity in the newsroom
-                                and its
-                                coverage</a>. </p>
-                    </section>
-                    <section>
-                        <span class="icon solid style2 major fa-person-booth"></span>
-                        <h3>Voting Rights Project</h3>
-                        <p>I joined UCLA VRP to my knowledge in public policy and my skillset in data
-                            science to create some social good. I used these
-                            skills
-                            to help the center's incredible legal team defend voting rights in Washington, New York, and
-                            Kansas.</p>
-                    </section>
-                    <section>
-                        <span class="icon solid style2 major fa-laptop-code"></span>
-                        <h3>Duke</h3>
-                        <p>After spending two summers interning at H&R Block and learning more about ML/DevOps. I joined
-                            Duke to dig deeper into the nuances of MLOps, Deep Learning, and Data Enginnering, and to
-                            keep learning and growing as a data scientist.</p>
-                        </p>
-                    </section>
-                    <section>
-                        <span class="icon solid style2 major fa-book"></span>
-                        <h3>Reading</h3>
-                        <p>I am a sucker for a good'ol historical fiction or historical analysis. My favorite book I
-                            read this year was Cloud Cuckoo Land
-                            by Anthony Doerr. You can follow along with my <a
-                                href="https://impossible-lumber-599.notion.site/Genesis-s-Reading-List-5613c61a51294181b0d7ea0c4e14c762">
-                                reading list and my book reviews</a>. Feel free
-                            to email me book recs as well! </p>
-                    </section>
-                    <section>
-                        <span class="icon style2 major fa-paper-plane"></span>
-                        <h3>Minnesota Star Tribune</h3>
-                        <p>I'm the founding data scientist for the data and analytics team at the Minnesota Star
-                            Tribune. I work on bespoke ML and AI solutions to put the work of our brilliant journalists
-                            in front of more readers and help the publisher navigate the complex world of digital media.
-                        </p>
-                    </section>
+                <span class="section-eyebrow">Background</span>
+                <h2>My Story 👨‍💻</h2>
+                <p>I grew up in Nanjing, China and Portland, Oregon 🌲. I love using data and code to tell stories, help
+                    journalist understand their readers better and enable newsrooms to grow and connect with their
+                    audience. I'm passionate about journalism, music, pottery, and reading.</p>
+            </div>
+
+            <div class="timeline" id="story-timeline">
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-chart-bar"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">UCLA</span>
+                        <h3>Statistics &amp; Political Science</h3>
+                        <p>I double majored at UCLA 🐻, applying data science to analyze and catalyze social good.</p>
+                    </div>
                 </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-newspaper"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">Daily Bruin</span>
+                        <h3>Editor-in-Chief</h3>
+                        <p>I fell in love with journalism — reporter, editor, then EIC. I ran and won on a platform to
+                            improve <a href="https://features.dailybruin.com/2022/diversity-report/">diversity in the
+                                newsroom and its coverage</a>.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-person-booth"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">UCLA VRP</span>
+                        <h3>Voting Rights Project</h3>
+                        <p>I used data science to support the center's legal team defending voting rights in Washington,
+                            New York, and Kansas.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-laptop-code"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">Duke MIDS</span>
+                        <h3>Interdisciplinary Data Science</h3>
+                        <p>After two summers at H&amp;R Block learning ML/DevOps, I came to Duke to go deeper on MLOps,
+                            Deep Learning, and Data Engineering.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-paper-plane"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">Minnesota Star Tribune</span>
+                        <h3>Founding Data Scientist</h3>
+                        <p>I build bespoke ML and AI solutions to put great journalism in front of more readers and help
+                            the publisher navigate the digital media landscape.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-users"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">Community</span>
+                        <h3>Asian American Journalists Association (AAJA) VP of Events</h3>
+                        <p>I organize the Minnesota chapter's annual trivia bowl and other events connecting Asian
+                            American journalists across the state.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-certificate"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">Continuous Learning</span>
+                        <h3>News Product Management</h3>
+                        <p>I joined the News Product Management Certification program's fifth cohort to sharpen my
+                            product and leadership skills from industry leaders changing news with technology.</p>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"><span class="icon solid fa-hands"></span></div>
+                    <div class="tl-content">
+                        <span class="tl-label">Clay</span>
+                        <h3>Pottery 🏺</h3>
+                        <p>I picked up pottery and love the meditative rhythm of the wheel. See what I've been making on
+                            my <a href="https://www.notion.so/Pottery-Studio-30e774271e438086bc76d13b0e5a8058"
+                                target="_blank" rel="noopener">pottery studio page</a>.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- two -->
-        <!-- <section class="spotlight style1 orient-right content-align-right image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2> PATHS Model </h2>
-                <p> [Add a brief description of your PATHS model project here - this will appear on your main portfolio page.
-                    Keep it to 2-3 sentences that give readers a quick overview and entice them to click through to learn more.]
-                </p>
-                <ul class="actions">
-                    <li><a href="projects/paths_model.html" class="button">Learn More</a></li>
-                </ul>
-            </div>
-            <div class="image">
-                <img src="images/paths-preview.png" alt="" />
-            </div>
-        </section> -->
+        <hr class="section-divider" />
 
-        <!-- Arena Marketplace -->
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2> Arena Marketplace: Survival Gear Shopping Platform for Tributes </h2>
-                <p> This full-stack database project is a Hunger Games-inspired shopping platform for tributes, modeled
-                    as a
-                    mini-Amazon. This interactive site allows tributes to purchase survival gear and supplies using
-                    virtual currency. I was responsible for integrating user accounts, product listings, and
-                    transactions, ensuring seamless functionality across the platform. The project involved
-                    collaboration on database design and code integration, enhancing the shopping experience under
-                    simulated high-stress conditions for users.
-                </p>
-                </p>
-                <ul class="actions">
-                    <li><a href="https://github.com/qu-genesis/image-to-prompt-project"
-                            class="icon brands style2 fa-gitlab"><span class="label">GitLab</span></a></li>
-                </ul>
+        <!-- ────────────────────────────────
+             PROJECTS
+             ──────────────────────────── -->
+        <div id="projects">
+            <div class="projects-header">
+                <span class="section-eyebrow">Work</span>
+                <h2>Selected Projects</h2>
+                <p>A mix of machine learning, data engineering, computer vision, and civic tech — built at Duke,
+                    UCLA, hackathons, and the Minnesota Star Tribune.</p>
             </div>
-            <div class="image">
-                <img src="images/database-project.png" alt="" />
-            </div>
-        </section>
 
-        <!-- Three -->
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2> Captioning AI-generated Images </h2>
-                <p> This study explores the possibility of reversing the relationship between text and image using
-                    advanced Vision-Language Pre-training (VLP) frameworks, such as the BLIP and ViT models. Our
-                    findings demonstrate that the fine-tuned BLIP model significantly surpasses the zero-shot baseline,
-                    showing a 25% improvement in average cosine similarity scores on the test set.</p>
-                </p>
-                <ul class="actions">
-                    <li><a href="https://www.dropbox.com/s/4t815frkls676i5/AI-Image-Captioning.pdf?dl=0"
-                            class="button">Read
-                            paper</a></li>
-                    <li><a href="https://gitlab.oit.duke.edu/sss82/rainforest"
-                            class="icon brands style2 fa-github-alt"><span class="label">GitHub</span></a></li>
-                </ul>
+            <!-- Filter bar -->
+            <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="eng">Data Engineering</button>
+                <button class="filter-btn" data-filter="cv">Computer Vision</button>
+                <button class="filter-btn" data-filter="nlp">NLP</button>
+                <button class="filter-btn" data-filter="civic">Civic &amp; Social</button>
+                <button class="filter-btn" data-filter="stats">Stats &amp; Analysis</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
             </div>
-            <div class="image">
-                <img src="images/ai-image.png" alt="" />
-            </div>
-        </section>
 
-        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2> Detection of Breast Tumors with Simulated Motion Blurs </h2>
-                <p> To better understand the common problem of motion artifacts in patients with breast cancer, we used
-                    OpenCV to simulate motion artifacts and a custom-built Faster R-CNN computer vision model to perform
-                    object identification and localization on tumor images to determine the direction of the motion blur
-                    that impacts classification performance the greatest.</p>
-                </p>
-                <ul class="actions">
-                    <li><a href="https://www.dropbox.com/s/ifu46vog3gsbtco/BME548Finalv5.pdf?dl=0" class="button">Read
-                            paper</a></li>
-                    <li><a href="https://github.com/nogibjj/breast-tumor-detection"
-                            class="icon brands style2 fa-github-alt"><span class="label">GitHub</span></a></li>
-                </ul>
-            </div>
-            <div class="image">
-                <img src="images/tumor.png" alt="" />
-            </div>
-        </section>
+            <!-- Projects Grid -->
+            <div class="projects-grid">
 
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2> Hidden Costs of Fashion </h2>
-                <p> This HackDuke project achieved third-place in the environmental track. In it, we used a
-                    state-of-the-art image-to-text neural network model, natural language
-                    processing, and
-                    data analysis to help uses identify the hidden electricity, water, and CO2 costs associated with a
-                    piece of clothing.
-                    Designed with sustainability and community in mind, the app allows users to conceptualize the
-                    environmental impact of their clothing purchases,
-                    compare them to the clothes of other users and make more informed decisions. The app is deployed on
-                    Heroku and is still in development. </p>
-                </p>
-                <ul class="actions">
-                    <li><a href="https://clothes4good.herokuapp.com/" class="button">Access App</a></li>
-                    <li><a href="https://github.com/nogibjj/clothes4good" class="icon brands style2 fa-github-alt"><span
-                                class="label">GitHub</span></a></li>
-                </ul>
-            </div>
-            <div class="image">
-                <img src="images/cover.png" alt="" />
-            </div>
-        </section>
+                <!-- Arena Marketplace -->
+                <article class="project-card" data-cat="fullstack" data-tags="fullstack">
+                    <img class="project-card__img" src="images/database-project.png"
+                        alt="Arena Marketplace database project" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">Full-Stack · Databases</p>
+                        <h3 class="project-card__title">Arena Marketplace: Survival Gear Shopping for Tributes</h3>
+                        <p class="project-card__desc">A Hunger Games-inspired mini-Amazon built on a relational
+                            database. I integrated user accounts, product listings, and transactions, ensuring
+                            seamless functionality and a smooth shopping experience under simulated high-stress
+                            conditions.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Database Design</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/qu-genesis/image-to-prompt-project" class="card-btn primary"
+                            target="_blank" rel="noopener">GitLab</a>
+                    </div>
+                </article>
 
-        <!-- Four -->
-        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2>Containerized FastAPI Application with GoodReads Data </h2>
-                <p>This FastAPI application, developed and deployed through AWS Cloud9, Elastic Container
-                    Registry, CodeBuild, and App Runner, queries a database of goodreads books and provides its users
-                    with information on books' authors, publisher, rating, and number of reviews. Continuous
-                    Integration and Continuous Deployment are performed through Actions and CodeBuild, pushing the
-                    latest
-                    images to AWS ECR and App Runner. To save cost,
-                    the App Runner is on pause, and users can replicate the app by running the python script or the
-                    docker image on DockerHub.
-                </p>
-                <ul class="actions">
-                    <li><a href="https://github.com/nogibjj/fastapi-project" class="button">Learn More</a></li>
-                    <li><a href="https://hub.docker.com/repository/docker/genesisqu/goodreads_fastapi"
-                            class="icon brands style2 fa-docker"><span class="label">Docker</span></a></li>
-                </ul>
-            </div>
-            <div class="image">
-                <img src="images/books.jpg" alt="" />
-            </div>
-        </section>
+                <!-- Captioning AI Images -->
+                <article class="project-card" data-cat="nlp" data-tags="nlp ml">
+                    <img class="project-card__img" src="images/ai-image.png" alt="AI Image Captioning project" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">NLP · Vision-Language</p>
+                        <h3 class="project-card__title">Captioning AI-generated Images</h3>
+                        <p class="project-card__desc">Using BLIP and ViT models to reverse the text→image
+                            relationship. Our fine-tuned BLIP model showed a <strong>25% improvement</strong> in
+                            average cosine similarity over the zero-shot baseline.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">BLIP</span>
+                            <span class="tech-tag">ViT</span>
+                            <span class="tech-tag">Fine-tuning</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://www.dropbox.com/s/4t815frkls676i5/AI-Image-Captioning.pdf?dl=0"
+                            class="card-btn primary" target="_blank" rel="noopener">Read Paper</a>
+                        <a href="https://gitlab.oit.duke.edu/sss82/rainforest" class="card-btn" target="_blank"
+                            rel="noopener">GitLab</a>
+                    </div>
+                </article>
 
-        <!-- Five -->
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2>SQLite Demo on Twitter Data </h2>
-                <p>In this project, I used Python's Tweepy in conjunction with SQLite to automate the extration of
-                    tweets on Joe Biden's timeline and conduct data summarization and exploration using SQL queries.
-                </p>
-                <ul class="actions">
-                    <li><a href="https://github.com/nogibjj/tweet_sql_project" class="button">Learn More</a></li>
-                </ul>
-            </div>
-            <div class="image">
-                <img src="images/twitter.jpg" alt="" />
-            </div>
-        </section>
+                <!-- Breast Tumor Detection -->
+                <article class="project-card" data-cat="cv" data-tags="cv ml">
+                    <img class="project-card__img" src="images/tumor.png" alt="Breast Tumor Detection" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">Computer Vision · Healthcare</p>
+                        <h3 class="project-card__title">Detection of Breast Tumors with Simulated Motion Blurs</h3>
+                        <p class="project-card__desc">Used OpenCV to simulate motion artifacts and a custom
+                            Faster R-CNN model to localize tumors and determine which blur direction most impacts
+                            classification performance.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Faster R-CNN</span>
+                            <span class="tech-tag">PyTorch</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://www.dropbox.com/s/ifu46vog3gsbtco/BME548Finalv5.pdf?dl=0"
+                            class="card-btn primary" target="_blank" rel="noopener">Read Paper</a>
+                        <a href="https://github.com/nogibjj/breast-tumor-detection" class="card-btn" target="_blank"
+                            rel="noopener">GitHub</a>
+                    </div>
+                </article>
 
-        <!-- Four -->
-        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
-            id="first">
-            <div class="content">
-                <h2>Global Temperature Prediction 🏖 </h2>
-                <p>This project uses Dask parallelization and time-series data on the temperature of over
-                    3,000 cities globally to
-                    estimate
-                    future temperature in these cities in order to understand the disproportionate impact of climate
-                    change globally. The project was developed using GitHub Action's Continuous-Integration/Continuous
-                    Delivery
-                    framework. Users can access model predictions through a Click command line
-                    app or
-                    a Streamlit web app. Both apps are containerized and can be run from my DockerHub remote repository.
-                </p>
-                <ul class="actions">
-                    <li><a href="https://github.com/nogibjj/global-temperature" class="button">Learn More</a></li>
-                    <li><a href="https://hub.docker.com/r/genesisqu/global-temperature"
-                            class="icon brands style2 fa-docker"><span class="label">Docker</span></a></li>
-                </ul>
-            </div>
-            <div class="image">
-                <img src="images/map.jpg" alt="" />
-            </div>
-        </section>
+                <!-- Hidden Costs of Fashion -->
+                <article class="project-card" data-cat="nlp" data-tags="nlp civic">
+                    <img class="project-card__img" src="images/cover.png" alt="Hidden Costs of Fashion app" />
+                    <div class="project-card__body">
+                        <div class="project-card__award">3rd Place — HackDuke Environmental Track</div>
+                        <p class="project-card__category">NLP · Sustainability</p>
+                        <h3 class="project-card__title">Hidden Costs of Fashion</h3>
+                        <p class="project-card__desc">An image-to-text neural network that reveals the hidden
+                            electricity, water, and CO₂ costs of clothing items. Users can compare their
+                            purchases to the community and make more informed decisions.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Neural Networks</span>
+                            <span class="tech-tag">Heroku</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://clothes4good.herokuapp.com/" class="card-btn primary" target="_blank"
+                            rel="noopener">Access App</a>
+                        <a href="https://github.com/nogibjj/clothes4good" class="card-btn" target="_blank"
+                            rel="noopener">GitHub</a>
+                    </div>
+                </article>
 
-        <!-- Five -->
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-            <div class="content">
-                <h2>Cannabis Legality and Drug Overdose</h2>
-                <p>Award-winning project in the UCLA Datafest competition where our team provided inference analysis for
-                    our client
-                    at the Rocky Mountain Poison and Drug Safety Center. Using a random forrest classifier and splitting
-                    the
-                    participant behaviors into corresponding risk levels, we found that recent use of cannabis is a
-                    major predictor for
-                    high drug overdose risks. The project won the Best Visualization award in the competition and
-                    achieved third place in International Statistical Institute Florence Nightingale Prize.
-                </p>
-                <ul class="actions">
-                    <li><a href="https://www.youtube.com/watch?v=bm0po7tq8mk" class="button">Learn More</a>
-                    </li>
-                </ul>
-                </ul>
-            </div>
-            <div class="image">
-                <img src="images/image.png" alt="" />
-            </div>
-        </section>
+                <!-- FastAPI GoodReads -->
+                <article class="project-card" data-cat="eng" data-tags="eng">
+                    <img class="project-card__img" src="images/books.jpg" alt="FastAPI GoodReads application" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">Data Engineering · MLOps</p>
+                        <h3 class="project-card__title">Containerized FastAPI App with GoodReads Data</h3>
+                        <p class="project-card__desc">FastAPI application deployed via AWS ECR, CodeBuild, and
+                            App Runner, querying a books database. Full CI/CD pipeline with Docker containerization
+                            and automatic image pushes on commit.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/nogibjj/fastapi-project" class="card-btn primary" target="_blank"
+                            rel="noopener">GitHub</a>
+                        <a href="https://hub.docker.com/repository/docker/genesisqu/goodreads_fastapi" class="card-btn"
+                            target="_blank" rel="noopener">DockerHub</a>
+                    </div>
+                </article>
 
+                <!-- SQLite Twitter -->
+                <article class="project-card" data-cat="eng" data-tags="eng stats">
+                    <img class="project-card__img" src="images/twitter.jpg" alt="SQLite Twitter Demo" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">Data Engineering · SQL</p>
+                        <h3 class="project-card__title">SQLite Demo on Twitter Data</h3>
+                        <p class="project-card__desc">Used Python's Tweepy with SQLite to automate extraction
+                            of tweets from Joe Biden's timeline, then conducted data summarization and exploration
+                            through SQL queries.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Tweepy</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/nogibjj/tweet_sql_project" class="card-btn primary" target="_blank"
+                            rel="noopener">GitHub</a>
+                    </div>
+                </article>
 
-        <!-- Six -->
-        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-            <div class="content">
-                <h2>Black Churches and Voter Turnout</h2>
-                <p>In this project, I aimed to understand whether presence of African American churches strengthen Black
-                    voter turnout in the South using county-level data from the Association of Religion Data Archives on
-                    the attendance and presence of predominantly African American churches.</p>
-                <ul class="actions">
-                    <li><a href="https://github.com/qu-genesis/black-church-voter-turnout" class="button">Learn More</a>
-                    </li>
-                </ul>
-                </ul>
+                <!-- Global Temperature -->
+                <article class="project-card" data-cat="ml" data-tags="ml eng">
+                    <img class="project-card__img" src="images/map.jpg" alt="Global Temperature Prediction" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">Machine Learning · Climate</p>
+                        <h3 class="project-card__title">Global Temperature Prediction 🏖</h3>
+                        <p class="project-card__desc">Dask-parallelized time-series model across 3,000+ cities
+                            to forecast future temperatures and understand the disproportionate global impact of
+                            climate change. Deployed as a Streamlit app and CLI tool.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Dask</span>
+                            <span class="tech-tag">Time-Series</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/nogibjj/global-temperature" class="card-btn primary" target="_blank"
+                            rel="noopener">GitHub</a>
+                        <a href="https://hub.docker.com/r/genesisqu/global-temperature" class="card-btn" target="_blank"
+                            rel="noopener">DockerHub</a>
+                    </div>
+                </article>
+
+                <!-- Cannabis & Overdose -->
+                <article class="project-card" data-cat="stats" data-tags="stats civic ml">
+                    <img class="project-card__img" src="images/image.png" alt="Cannabis and Drug Overdose Analysis" />
+                    <div class="project-card__body">
+                        <div class="project-card__award">Best Visualization + ISI Florence Nightingale Finalist</div>
+                        <p class="project-card__category">Stats · Public Health</p>
+                        <h3 class="project-card__title">Cannabis Legality and Drug Overdose</h3>
+                        <p class="project-card__desc">UCLA Datafest award-winning project analyzing drug overdose
+                            risk for the Rocky Mountain Poison Center. A random forest classifier found recent
+                            cannabis use to be a major predictor of high overdose risk.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Random Forest</span>
+                            <span class="tech-tag">Data Visualization</span>
+                            <span class="tech-tag">Public Health</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://www.youtube.com/watch?v=bm0po7tq8mk" class="card-btn primary" target="_blank"
+                            rel="noopener">Watch Presentation</a>
+                    </div>
+                </article>
+
+                <!-- Black Churches -->
+                <article class="project-card" data-cat="civic" data-tags="civic stats">
+                    <img class="project-card__img" src="images/scatterplot.jpg"
+                        alt="Black Churches and Voter Turnout" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">Civic · Political Science</p>
+                        <h3 class="project-card__title">Black Churches and Voter Turnout</h3>
+                        <p class="project-card__desc">County-level analysis using ARDA data to understand whether
+                            the presence of predominantly African American churches strengthens Black voter turnout
+                            in the South.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Regression Analysis</span>
+                            <span class="tech-tag">Political Science</span>
+                            <span class="tech-tag">Civic Data</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="https://github.com/qu-genesis/black-church-voter-turnout" class="card-btn primary"
+                            target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </article>
+
             </div>
-            <div class="image">
-                <img src="images/scatterplot.jpg" alt="" />
-            </div>
-        </section>
+        </div>
 
+        <hr class="section-divider" />
 
-        <!-- Eight -->
-        <section class="wrapper style1 align-center">
+        <!-- ────────────────────────────────
+             JOURNALISM GALLERY
+             ──────────────────────────── -->
+        <section id="journalism" class="wrapper style1 align-center">
             <div class="inner">
+                <span class="section-eyebrow">Journalism</span>
                 <h2>By Genesis Qu</h2>
-                <h4><i>Editor-in-Chief<i></h4>
+                <h4><em>Editor-in-Chief</em></h4>
                 <p>Click on the slides below to read some of the stories I wrote and those that were written about me
                     during my time at the Daily Bruin. As
                     the first person of
                     color to take charge of the newsroom in almost a decade, I was able to bring a new perspective to
                     the newsroom and the stories we told. Photo credits to the incredible photographers at The Bruin,
-                    their
-                    names are in the stories.
+                    their names are in the stories.
                 </p>
             </div>
 
-            <!-- Gallery -->
             <div class="gallery style2 medium lightbox onscroll-fade-in">
                 <article>
                     <a href="https://dailybruin.com/2022/06/04/finding-purpose-in-my-editorship-to-create-a-kinder-community-at-the-bruin-30"
                         class="image">
-                        <img src="images/gallery/thumbs/genesis_pic.jpg" alt="" />
+                        <img src="images/gallery/thumbs/genesis_pic.jpg" alt="Genesis Qu -30- column" />
                     </a>
                     <div class="caption">
                         <h3>-30- column</h3>
@@ -377,14 +450,12 @@
                 <article>
                     <a href="https://dailybruin.com/2020/06/08/ucla-faculty-criticize-decision-to-let-lapd-use-jackie-robinson-stadium"
                         class="image">
-                        <img src="images/gallery/thumbs/robinson.jpg" alt="" />
+                        <img src="images/gallery/thumbs/robinson.jpg" alt="Jackie Robinson Stadium" />
                     </a>
                     <div class="caption">
                         <h3>Faculty criticize JRS Incident</h3>
-                        <p>UCLA faculty criticize decision to let LAPD use Jackie Robinson Stadium to detain Black Lives
-                            Matter protestors (Photo Credit: Liz
-                            Ketchem)
-                        </p>
+                        <p>UCLA faculty criticize decision to let LAPD use Jackie Robinson Stadium to detain BLM
+                            protestors (Photo: Liz Ketchem)</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -392,14 +463,12 @@
                 </article>
                 <article>
                     <a href="https://features.dailybruin.com/2022/diversity-report/" class="image">
-                        <img src="images/gallery/thumbs/bruin.png" alt="" />
+                        <img src="images/gallery/thumbs/bruin.png" alt="Diversity Report" />
                     </a>
                     <div class="caption">
-                        <h3>Diversity Report
-                        </h3>
+                        <h3>Diversity Report</h3>
                         <p>For the third consecutive year, the Daily Bruin is reflecting on its progress toward becoming
-                            a more diverse and representative center of journalism for the UCLA community.
-                        </p>
+                            a more diverse center of journalism.</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -408,13 +477,11 @@
                 <article>
                     <a href="https://dailybruin.com/2019/11/18/bernie-sanders-presents-progressive-platform-to-5200-supporters-at-east-la-rally"
                         class="image">
-                        <img src="images/gallery/thumbs/bernie.jpg" alt="" />
+                        <img src="images/gallery/thumbs/bernie.jpg" alt="Sanders Rally" />
                     </a>
                     <div class="caption">
-                        <h3>Sanders Rally
-                        </h3>
-                        <p>Bernie Sanders presents progressive platform to 5,200 supporters at East LA rally
-                        </p>
+                        <h3>Sanders Rally</h3>
+                        <p>Bernie Sanders presents progressive platform to 5,200 supporters at East LA rally</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -423,12 +490,11 @@
                 <article>
                     <a href="https://dailybruin.com/2019/10/13/presidential-candidate-klobuchar-discusses-domestic-violence-at-ucla-event"
                         class="image">
-                        <img src="images/gallery/thumbs/klobuchar.jpg" alt="" />
+                        <img src="images/gallery/thumbs/klobuchar.jpg" alt="Klobuchar Roundtable" />
                     </a>
                     <div class="caption">
-                        <h3>Klobuchar Rountable</h3>
-                        <p>Presidential candidate Klobuchar discusses domestic violence at UCLA event
-                        </p>
+                        <h3>Klobuchar Roundtable</h3>
+                        <p>Presidential candidate Klobuchar discusses domestic violence at UCLA event</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -437,13 +503,12 @@
                 <article>
                     <a href="https://dailybruin.com/2019/10/04/alex-padilla-speaks-at-event-about-increasing-voter-participation-in-2020-election"
                         class="image">
-                        <img src="images/gallery/thumbs/padilla.jpg" alt="" />
+                        <img src="images/gallery/thumbs/padilla.jpg" alt="Padilla on Voter Participation" />
                     </a>
                     <div class="caption">
                         <h3>Padilla on Voter Participation</h3>
-                        <p>The California secretary of state said his office is working on increasing voter
-                            participation and enforcing voter security at a university event Thursday.
-                        </p>
+                        <p>The California secretary of state is working on increasing voter participation at a
+                            university event Thursday.</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -452,13 +517,12 @@
                 <article>
                     <a href="https://dailybruin.com/2019/06/06/ucla-study-finds-schools-across-the-country-are-becoming-increasingly-segregated"
                         class="image">
-                        <img src="images/gallery/thumbs/segregation.png" alt="" />
+                        <img src="images/gallery/thumbs/segregation.png" alt="School Segregation" />
                     </a>
                     <div class="caption">
                         <h3>Increased public school segregation</h3>
                         <p>American public schools are increasingly segregated along the lines of race and income, a
-                            study found.
-                        </p>
+                            study found.</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -467,12 +531,11 @@
                 <article>
                     <a href="https://dailybruin.com/2020/11/13/providing-hubs-for-students-experiencing-housing-insecurity-only-short-term-fix"
                         class="image">
-                        <img src="images/gallery/thumbs/housing.jpg" alt="" />
+                        <img src="images/gallery/thumbs/housing.jpg" alt="Bruin Hub Housing Insecurity" />
                     </a>
                     <div class="caption">
-                        <h3>Bruin Hub & Housing Insecurity</h3>
-                        <p>Providing hubs for students experiencing housing-insecurity only short-term fix
-                        </p>
+                        <h3>Bruin Hub &amp; Housing Insecurity</h3>
+                        <p>Providing hubs for students experiencing housing insecurity is only a short-term fix</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -481,13 +544,11 @@
                 <article>
                     <a href="https://dailybruin.com/2020/10/27/qa-new-edi-vice-chancellor-anna-spain-bradleys-goals-for-her-upcoming-term"
                         class="image">
-                        <img src="images/gallery/thumbs/asb.jpg" alt="" />
+                        <img src="images/gallery/thumbs/asb.jpg" alt="Interview with EDI Vice Chancellor" />
                     </a>
                     <div class="caption">
                         <h3>Interview with Vice Chancellor</h3>
-                        <p>Q&A: New Equity, Diversity and Inclusion Vice Chancellor Anna Spain Bradley's goals for her
-                            upcoming term
-                        </p>
+                        <p>Q&amp;A: New EDI Vice Chancellor Anna Spain Bradley's goals for her upcoming term</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -496,12 +557,11 @@
                 <article>
                     <a href="https://dailybruin.com/2019/05/16/uc-board-of-regents-votes-to-increase-nonresident-tuition-by-762-per-year"
                         class="image">
-                        <img src="images/gallery/thumbs/regents.jpg" alt="" />
+                        <img src="images/gallery/thumbs/regents.jpg" alt="Tuition Hike" />
                     </a>
                     <div class="caption">
                         <h3>Tuition Hike</h3>
-                        <p>UC Board of Regents votes to increase nonresident tuition by $762 per year
-                        </p>
+                        <p>UC Board of Regents votes to increase nonresident tuition by $762 per year</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -510,12 +570,11 @@
                 <article>
                     <a href="https://dailybruin.com/2020/10/16/ucla-faculty-discuss-what-mail-in-voting-will-look-like-for-the-upcoming-election"
                         class="image">
-                        <img src="images/gallery/thumbs/ballot.jpg" alt="" />
+                        <img src="images/gallery/thumbs/ballot.jpg" alt="Mail-in Voting" />
                     </a>
                     <div class="caption">
                         <h3>Mail-in Voting in 2020</h3>
-                        <p>UCLA faculty discuss what mail-in voting will look like for the 2020 general election
-                        </p>
+                        <p>UCLA faculty discuss what mail-in voting will look like for the 2020 general election</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
@@ -524,37 +583,39 @@
                 <article>
                     <a href="https://dailybruin.com/2019/03/20/event-features-alum-discussing-her-experience-as-us-assistant-secretary-of-state"
                         class="image">
-                        <img src="images/gallery/thumbs/sos.jpg" alt="" />
+                        <img src="images/gallery/thumbs/sos.jpg" alt="Assistant US Secretary of State Talk" />
                     </a>
                     <div class="caption">
                         <h3>Assistant US Secretary of State Talk</h3>
-                        <p>The assistant secretary of state for public affairs for the United States encouraged students
-                            to pursue a career in the state department at an event Friday.
-                        </p>
+                        <p>The assistant secretary of state for public affairs encouraged students to pursue a career in
+                            the state department.</p>
                         <ul class="actions fixed">
                             <li><span class="button small">Read Story</span></li>
                         </ul>
                     </div>
                 </article>
             </div>
-
         </section>
 
-        <!-- Footer -->
-        <footer class="wrapper style1 align-center">
+        <!-- ────────────────────────────────
+             FOOTER
+             ──────────────────────────── -->
+        <footer id="contact" class="wrapper style1 align-center">
             <div class="inner">
+                <span class="section-eyebrow" style="color:#5b7fa6; border-left-color:#5b7fa6">Get in Touch</span>
+                <h2 style="font-style:italic; margin-bottom:1rem">Say hello.</h2>
                 <ul class="icons">
-                    <li><a href="https://twitter.com/QuGenesis" class="icon brands style2 fa-twitter"><span
-                                class="label">Twitter</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/genesis-qu/"
-                            class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a>
+                    <li><a href="https://twitter.com/QuGenesis" class="icon brands style2 fa-twitter" target="_blank"
+                            rel="noopener"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/genesis-qu/" class="icon brands style2 fa-linkedin-in"
+                            target="_blank" rel="noopener"><span class="label">LinkedIn</span></a>
                     </li>
-                    <li><a href="mailto: genesis.qu@duke.edu" class="icon style2 fa-envelope"><span
+                    <li><a href="mailto:genesis.qu@duke.edu" class="icon style2 fa-envelope"><span
                                 class="label">Email</span></a></li>
-                    <li><a href="https://github.com/qu-genesis" class="icon brands style2 fa-github-alt"><span
-                                class="label">GitHub</span></a></li>
+                    <li><a href="https://github.com/qu-genesis" class="icon brands style2 fa-github-alt" target="_blank"
+                            rel="noopener"><span class="label">GitHub</span></a></li>
                 </ul>
-                <p>&copy; Genesis' Portfolio. Hosted by GitHub Pages. Design inspired by HTML5 UP</a>.</p>
+                <p>&copy; Genesis Qu &mdash; Hosted by GitHub Pages. Design inspired by HTML5 UP.</p>
             </div>
         </footer>
 
@@ -568,6 +629,96 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        (function () {
+            'use strict';
+
+            /* ── Nav: hide on scroll-down, show on scroll-up ── */
+            var nav = document.getElementById('site-nav');
+            var lastY = 0;
+            var navLinks = nav.querySelectorAll('ul li a');
+            var sections = ['about', 'story', 'projects', 'journalism', 'contact'];
+
+            window.addEventListener('scroll', function () {
+                var y = window.scrollY;
+
+                // Hide/show nav
+                if (y > lastY && y > 80) { nav.classList.add('nav-hidden'); }
+                else { nav.classList.remove('nav-hidden'); }
+                lastY = y;
+
+                // Active link highlight
+                sections.forEach(function (id, i) {
+                    var el = document.getElementById(id);
+                    if (!el) return;
+                    var rect = el.getBoundingClientRect();
+                    if (rect.top <= 80 && rect.bottom >= 0) {
+                        navLinks.forEach(function (l) { l.classList.remove('active'); });
+                        if (navLinks[i]) navLinks[i].classList.add('active');
+                    }
+                });
+            }, { passive: true });
+
+            /* ── Smooth scroll ── */
+            nav.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            /* ── Project filter ── */
+            var filterBtns = document.querySelectorAll('.filter-btn');
+            var cards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    // Update active button
+                    filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+
+                    var filter = btn.getAttribute('data-filter');
+
+                    cards.forEach(function (card) {
+                        if (filter === 'all') {
+                            card.classList.remove('hidden');
+                        } else {
+                            var tags = (card.getAttribute('data-tags') || '').split(' ');
+                            if (tags.indexOf(filter) !== -1) {
+                                card.classList.remove('hidden');
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        }
+                    });
+                });
+            });
+
+            /* ── Timeline: scroll-in AND scroll-out ── */
+            var tlItems = document.querySelectorAll('.tl-item');
+            if ('IntersectionObserver' in window) {
+                var tlObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('tl-visible');
+                            entry.target.classList.remove('tl-hidden');
+                        } else {
+                            entry.target.classList.remove('tl-visible');
+                            entry.target.classList.add('tl-hidden');
+                        }
+                    });
+                }, { threshold: 0.2 });
+                tlItems.forEach(function (el) { tlObs.observe(el); });
+            } else {
+                tlItems.forEach(function (el) { el.classList.add('tl-visible'); });
+            }
+
+        })();
+    </script>
 
 </body>
 

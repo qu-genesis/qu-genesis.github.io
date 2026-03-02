@@ -175,7 +175,7 @@
         <div id="projects">
             <div class="projects-header">
                 <span class="section-eyebrow">Work</span>
-                <h2>Selected Projects</h2>
+                <h2>Select Projects</h2>
                 <p>A mix of machine learning, data engineering, computer vision, and civic tech — built at Duke,
                     UCLA, hackathons, and the Minnesota Star Tribune.</p>
             </div>
@@ -195,7 +195,52 @@
             <!-- Projects Grid -->
             <div class="projects-grid">
 
-                <!-- Arena Marketplace -->
+                <!-- New Subscriber Paths (Star Tribune) -->
+                <article class="project-card" data-cat="ml" data-tags="ml stats eng">
+                    <img class="project-card__img" src="images/projects/new-subscriber-paths/cover.png"
+                        alt="New Subscriber Paths model" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">Machine Learning · News</p>
+                        <h3 class="project-card__title">Modeling Drivers of Conversion</h3>
+                        <p class="project-card__desc">A multi-touch attribution model and Negative Binomial Regression
+                            framework that measures which stories convert readers into subscribers — giving Minnesota
+                            Star Tribune editors a principled, business-aligned view of story performance.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Attribution Modeling</span>
+                            <span class="tech-tag">Neg. Binomial Regression</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="projects/paths_model.html" class="card-btn primary">Read</a>
+                    </div>
+                </article>
+
+                <!-- Topic & Archetype Classification -->
+                <article class="project-card" data-cat="nlp" data-tags="nlp ml stats">
+                    <img class="project-card__img" src="images/projects/topic-archetypes/topics.png"
+                        alt="Topic classification system" />
+                    <div class="project-card__body">
+                        <p class="project-card__category">NLP · Audience Insights</p>
+                        <h3 class="project-card__title">Designing a Text-Taxonomy System for the Newsroom</h3>
+                        <p class="project-card__desc">A two-part NLP system that classifies Star Tribune articles by
+                            both topic (BERTopic) and story format (spaCy deep learning) — revealing which
+                            topic-archetype combinations are the strongest subscriber acquisition drivers.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">BERTopic</span>
+                            <span class="tech-tag">spaCy</span>
+                            <span class="tech-tag">Prodigy</span>
+                            <span class="tech-tag">Snowflake</span>
+                        </div>
+                    </div>
+                    <div class="project-card__actions">
+                        <a href="projects/topic_archetypes.html" class="card-btn primary">Read</a>
+                    </div>
+                </article>
+
+                <!-- Arena Marketplace
                 <article class="project-card" data-cat="fullstack" data-tags="fullstack">
                     <img class="project-card__img" src="images/database-project.png"
                         alt="Arena Marketplace database project" />
@@ -214,14 +259,14 @@
                         </div>
                     </div>
                     <div class="project-card__actions">
-                        <a href="https://github.com/qu-genesis/image-to-prompt-project" class="card-btn primary"
+                        <a href="https://gitlab.oit.duke.edu/sss82/rainforest" class="card-btn primary"
                             target="_blank" rel="noopener">GitLab</a>
                     </div>
-                </article>
+                </article> -->
 
                 <!-- Captioning AI Images -->
                 <article class="project-card" data-cat="nlp" data-tags="nlp ml">
-                    <img class="project-card__img" src="images/ai-image.png" alt="AI Image Captioning project" />
+                    <img class="project-card__img" src="images/blip.png" alt="AI Image Captioning project" />
                     <div class="project-card__body">
                         <p class="project-card__category">NLP · Vision-Language</p>
                         <h3 class="project-card__title">Captioning AI-generated Images</h3>
@@ -238,8 +283,8 @@
                     <div class="project-card__actions">
                         <a href="https://www.dropbox.com/s/4t815frkls676i5/AI-Image-Captioning.pdf?dl=0"
                             class="card-btn primary" target="_blank" rel="noopener">Read Paper</a>
-                        <a href="https://gitlab.oit.duke.edu/sss82/rainforest" class="card-btn" target="_blank"
-                            rel="noopener">GitLab</a>
+                        <a href="https://github.com/qu-genesis/image-to-prompt-project/" class="card-btn"
+                            target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </article>
 
@@ -293,7 +338,7 @@
                 </article>
 
                 <!-- FastAPI GoodReads -->
-                <article class="project-card" data-cat="eng" data-tags="eng">
+                <!-- <article class="project-card" data-cat="eng" data-tags="eng">
                     <img class="project-card__img" src="images/books.jpg" alt="FastAPI GoodReads application" />
                     <div class="project-card__body">
                         <p class="project-card__category">Data Engineering · MLOps</p>
@@ -315,10 +360,10 @@
                         <a href="https://hub.docker.com/repository/docker/genesisqu/goodreads_fastapi" class="card-btn"
                             target="_blank" rel="noopener">DockerHub</a>
                     </div>
-                </article>
+                </article> -->
 
                 <!-- SQLite Twitter -->
-                <article class="project-card" data-cat="eng" data-tags="eng stats">
+                <!-- <article class="project-card" data-cat="eng" data-tags="eng stats">
                     <img class="project-card__img" src="images/twitter.jpg" alt="SQLite Twitter Demo" />
                     <div class="project-card__body">
                         <p class="project-card__category">Data Engineering · SQL</p>
@@ -337,7 +382,7 @@
                         <a href="https://github.com/nogibjj/tweet_sql_project" class="card-btn primary" target="_blank"
                             rel="noopener">GitHub</a>
                     </div>
-                </article>
+                </article> -->
 
                 <!-- Global Temperature -->
                 <article class="project-card" data-cat="ml" data-tags="ml eng">

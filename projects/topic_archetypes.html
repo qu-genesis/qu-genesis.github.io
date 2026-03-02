@@ -6,9 +6,9 @@
 <html>
 
 <head>
-    <title>New Subscriber Paths — Genesis Qu</title>
+    <title>What Kind of Story Is This? — Genesis Qu</title>
     <meta name="description"
-        content="How the Minnesota Star Tribune measures which stories convert readers into subscribers, using multi-touch attribution and Negative Binomial Regression." />
+        content="How the Minnesota Star Tribune built a two-part NLP system to classify both what stories are about and how they are told — and what that revealed about subscriber acquisition." />
     <link rel="shortcut icon" type="image/png" href="../images/bee.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -65,14 +65,13 @@
             border-bottom-color: #b85530;
         }
 
-        /* Page body */
         body,
         #wrapper {
             background-color: #FFF1E5;
             padding-top: 52px;
         }
 
-        /* Hero strip */
+        /* Hero */
         .cs-hero {
             padding: 5rem 2rem 4rem;
             max-width: 780px;
@@ -167,6 +166,7 @@
             margin-bottom: 1.25rem;
         }
 
+        /* Archetype list */
         .cs-body ul {
             margin: 1rem 0 1.5rem 0;
             padding: 0;
@@ -177,7 +177,7 @@
             font-size: 1rem;
             line-height: 1.75;
             color: #3a3028;
-            padding: 0.65rem 0 0.65rem 0;
+            padding: 0.65rem 0;
             border-bottom: 1px solid #e8d5c4;
             display: grid;
             grid-template-columns: max-content 1fr;
@@ -218,7 +218,30 @@
             color: #7a6858;
             font-style: italic;
             line-height: 1.5;
+        }
+
+        /* Placeholder for missing image */
+        .cs-figure-placeholder {
+            background: #f5ece4;
+            border: 1.5px dashed #d4b8a8;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 220px;
             text-align: center;
+            padding: 2rem;
+        }
+
+        .cs-figure-placeholder p {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #b89080;
+            margin: 0;
         }
 
         /* Pullquote */
@@ -298,11 +321,11 @@
 
         <!-- ── Hero ── -->
         <header class="cs-hero">
-            <span class="cs-kicker">Minnesota Star Tribune · Data Science</span>
-            <h1>New Subscriber Paths</h1>
-            <p class="cs-dek">At the Minnesota Star Tribune, growing our subscriber base means understanding what
-                actually drives readers to pay. The question we kept returning to: what kind of storytelling compels
-                someone to pull out their wallet?</p>
+            <span class="cs-kicker">Minnesota Star Tribune · NLP · Audience Insights</span>
+            <h1>What Kind of Story Is This?</h1>
+            <p class="cs-dek">Building an NLP Classification System for the Newsroom. At the Star Tribune, better
+                audience insights start with a better understanding of what we publish — so we built a system to
+                describe it systematically.</p>
             <div class="cs-meta">
                 <div class="cs-meta-item">
                     <span class="cs-meta-label">Role</span>
@@ -310,11 +333,11 @@
                 </div>
                 <div class="cs-meta-item">
                     <span class="cs-meta-label">Methods</span>
-                    <span class="cs-meta-value">Multi-touch Attribution · Negative Binomial Regression</span>
+                    <span class="cs-meta-value">BERTopic · spaCy · LLM · Prodigy Annotation</span>
                 </div>
                 <div class="cs-meta-item">
                     <span class="cs-meta-label">Stack</span>
-                    <span class="cs-meta-value">Python · SQL</span>
+                    <span class="cs-meta-value">Python · MongoDB · Snowflake · SQL</span>
                 </div>
             </div>
         </header>
@@ -322,79 +345,115 @@
         <!-- ── Article body ── -->
         <article class="cs-body">
 
-            <h2>The Problem with Traffic</h2>
-            <p>Traditional audience metrics — pageviews, sessions, engagement — only tell part of the story. We found
-                that the articles bringing in the most raw traffic often looked nothing like the articles people read
-                right before subscribing. That gap pointed to a measurement problem. We needed a metric that evaluated
-                stories not by how many people they reached, but by how effectively they converted readers into
-                subscribers.</p>
+            <h2>Starting with Editors</h2>
+            <p>Before writing a line of code, we talked to reporters and editors. What, in their experience, moves the
+                needle with readers? The answer came from every direction: the topic, yes — but also the format. An
+                investigation into city government lands differently than a quick-hit news brief on the same subject.
+                Both matter. Neither tells the whole story alone.</p>
+            <p>That conversation shaped two parallel modeling efforts: one to classify <em>what</em> a story is about,
+                the other to classify <em>how</em> it's told.</p>
 
-            <h2>Building the Metric</h2>
-            <p>We developed a multi-touch attribution model that counts how many new subscribers engaged with a story in
-                the 30 days before their purchase. We called the output <em>new subscriber paths</em> — a name chosen
-                deliberately to be legible to everyone in the newsroom, not just the data team.</p>
-            <p>The results were immediately striking. Editors looked at the top-paths stories and said, unprompted, that
-                they felt like good journalism — the kind of work that earns a subscription.</p>
+            <h2>Classifying Topics with BERTopic</h2>
+            <p>For content topics, we used BERTopic — a modern approach to topic modeling that groups articles by
+                semantic similarity rather than keyword overlap. Articles were pulled from MongoDB and routed through an
+                ingestion pipeline into Snowflake for processing.</p>
+
+            <!-- <figure class="cs-figure">
+                <div class="cs-figure-placeholder">
+                    <p>Architecture diagram — BERTopic ingestion pipeline (coming soon)</p>
+                </div>
+                <figcaption>Articles flow from MongoDB through an ingestion pipeline into Snowflake, where they are
+                    processed and passed to the BERTopic model.</figcaption>
+            </figure> -->
+
+            <p>We trained multiple BERTopic variants across a range of embedding strategies, dimensionality reduction
+                techniques, and clustering hyperparameters. Once clusters formed, we used an LLM to sample stories from
+                each and assign semantically meaningful topic names — a step that turned opaque cluster IDs into labels
+                editors could actually use.</p>
+            <p>Model selection relied on two complementary scores: coherence (are stories within a topic genuinely
+                similar?) and diversity (are topics distinct from one another?). Finalists were then evaluated against a
+                hand-labeled set of 100 articles, tested on exact and marginal correctness.</p>
 
             <figure class="cs-figure">
-                <img src="../images/projects/new-subscriber-paths/explainer.png"
-                    alt="Diagram showing two readers each consuming three stories before subscribing, with one story shared between them" />
-                <figcaption>Each story a new subscriber read in the 30 days before purchase counts as one path for that
-                    story. Here, Person A and Person B each read three stories before subscribing — including one story
-                    they both visited. That shared story earns two paths: one for each reader it helped convert.
-                </figcaption>
+                <img src="../images/projects/topic-archetypes/diversity_coherence.png"
+                    alt="Scatter plot of BERTopic model candidates plotted by coherence score on the x-axis and diversity score on the y-axis, with three well-balanced candidates highlighted in green" />
+                <figcaption>Each point is a trained BERTopic variant. The three green candidates sit in the upper-right
+                    — high on both coherence and diversity — and advanced to human evaluation.</figcaption>
             </figure>
 
-            <h2>Putting It in Context</h2>
-            <p>Raw path counts are tricky to interpret. Three factors complicate any direct comparison between stories:
-            </p>
+            <figure class="cs-figure">
+                <img src="../images/projects/topic-archetypes/model_comparison.png"
+                    alt="Side-by-side table comparing topic labels generated by three model phases, showing how topic names evolved across iterations" />
+                <figcaption>Topic labels refined across three model phases. LLM-generated names grew more precise with
+                    each iteration as embedding and clustering parameters were tuned.</figcaption>
+            </figure>
+
+            <p>The final model surfaced a rich map of the Star Tribune's editorial terrain — from hyperlocal coverage
+                like Minnesota House Elections to cultural beats like Music Festivals and Minnesota Wild hockey.</p>
+
+            <figure class="cs-figure">
+                <img src="../images/projects/topic-archetypes/topics.png"
+                    alt="Bubble chart showing the distribution of story topics, where each circle represents a topic cluster, sized by number of stories and positioned by semantic relatedness" />
+                <figcaption>The final topic space. Each bubble is a cluster; size reflects story volume and proximity
+                    reflects semantic relatedness. Sports topics cluster together on the right, politics and policy on
+                    the left.</figcaption>
+            </figure>
+
+            <h2>Classifying Story Archetypes</h2>
+            <p>Topic alone doesn't explain performance. A feature story and an inverted pyramid on the same subject are
+                fundamentally different products. To capture that, we worked with the news team to define four story
+                archetypes:</p>
 
             <ul>
-                <li><strong>Maturity</strong>Traffic accumulates in days; paths take weeks. A story isn't fairly judged
-                    until it's had time to convert.</li>
-                <li><strong>Audience</strong>A piece on Minneapolis city politics draws a different — and smaller —
-                    potential subscriber pool than Vikings coverage. That difference shows up in the numbers.</li>
-                <li><strong>Discount environment</strong>Promotional pricing at the time of purchase inflates path
-                    counts across the board.</li>
+                <li><strong>Inverted Pyramid</strong>A medium-length, fact-forward news brief — the workhorse of daily
+                    coverage.</li>
+                <li><strong>Explainer</strong>Context-first pieces that help readers understand complex situations:
+                    "What experts say," "Five things to know."</li>
+                <li><strong>Feature</strong>Longer narrative pieces centered on a subject or person, rich with backstory
+                    and scene-setting.</li>
+                <li><strong>Investigation / Analysis</strong>In-depth reporting that uncovers hidden or complex facts
+                    through sourcing and data.</li>
             </ul>
 
-            <p>Editors needed a way to account for all three when evaluating a story. We turned to a Negative Binomial
-                Regression model, well-suited for count data with overdispersion. The model learns the historical
-                distribution of path counts and attributes variance to two key factors: how long the story has been
-                published, and which section it ran in — a reliable proxy for audience.</p>
+            <p>To generate training data, we used Prodigy, an annotation tool for unstructured text. Journalists and
+                editors labeled hundreds of articles in a working lunch session, sorting stories into the four buckets.
+            </p>
 
             <figure class="cs-figure">
-                <img src="../images/projects/new-subscriber-paths/architecture.png"
-                    alt="System diagram showing four story features feeding into a regression model, which produces an expected range compared against actual paths to yield a performance category" />
-                <figcaption>The regression model takes four inputs for each story — article section, days since
-                    publication, subscription pricing, and term — to generate an expected range of path counts.
-                    Comparing that modeled range against the story's actual paths yields its performance category.
-                </figcaption>
+                <img src="../images/projects/topic-archetypes/annotation_architecture.png"
+                    alt="Hand-drawn circular diagram showing the four-stage ML workflow: annotate data, train NLP model, automate predictions, validate model" />
+                <figcaption>The archetype classifier's iterative workflow: human-labeled data trains the model,
+                    predictions are automated at scale, then spot-checked by editors to catch drift before the next
+                    training round.</figcaption>
             </figure>
 
-            <h2>The Framework</h2>
-            <p>With the model fitted, we can generate an expected distribution of paths for any story given its section
-                and age. That gives us a principled basis for comparison.</p>
+            <p>With that labeled dataset in hand, we trained a multi-class deep learning classifier using spaCy,
+                optimized on macro F1 score to ensure balanced performance across all four categories — including the
+                rarest ones.</p>
 
             <div class="cs-pullquote">
-                <p>A story outperforming 90% of its expected distribution earns a "top-performing" label; one in the
-                    bottom 20% is flagged as "low-performing."</p>
+                <p>Editors sorted hundreds of stories in a single lunch. The annotations they produced in an afternoon
+                    became the foundation for a classifier that now labels thousands of articles a month.</p>
             </div>
 
+            <h2>What We Learned</h2>
+            <p>With both models running, we could cross every article on its topic and archetype — and then model
+                expected subscriber acquisition for each combination using regression.</p>
+            <p>The results were instructive. Investigations and analytical pieces are, unsurprisingly, among the most
+                powerful acquisition drivers. But the archetype effect isn't uniform. The best format depends heavily on
+                the topic.</p>
+
             <figure class="cs-figure">
-                <img src="../images/projects/new-subscriber-paths/distribution.png"
-                    alt="Right-skewed distribution of path counts divided into five color-coded performance bands, with an example story at 7 paths falling in the top-performing tier" />
-                <figcaption>The model produces a right-skewed expected distribution of paths for stories in a given
-                    section and age bracket. Most stories cluster near zero — few earn many paths. An example story with
-                    7 paths lands well into the top-performing band (75th percentile and above), placing it among the
-                    newsroom's strongest subscriber drivers.</figcaption>
+                <img src="../images/projects/topic-archetypes/model.png"
+                    alt="Dot plot showing expected number of new subscriber conversions for stories broken down by topic on the y-axis and archetype shown as color-coded dots, revealing that investigative pieces on Minnesota politics are the strongest acquisition driver" />
+                <figcaption>Expected subscriber conversions by topic and archetype. For Minnesota Elections and Criminal
+                    Cases, investigative pieces (blue) dominate. For Housing and Urban Development, features (yellow)
+                    outperform — format advantage varies by beat.</figcaption>
             </figure>
 
-            <h2>Impact</h2>
-            <p>The metric has become a fixture in how editors set goals and evaluate their sections. It gave the
-                newsroom a new dimension to think about story performance — one that aligns more closely with the Star
-                Tribune's core business objective — and contributed to a broader cultural shift toward evidence-driven
-                editorial decisions.</p>
+            <p>For housing and crime coverage, for example, features — not investigations — were the strongest
+                subscriber acquisition lever. That kind of finding gives editors something concrete: not just what to
+                cover, but how to cover it.</p>
 
         </article>
 
